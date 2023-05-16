@@ -1,30 +1,10 @@
 import requests
 import json
 from bs4 import BeautifulSoup 
+from APIs.oraModel import Model
 
-# Função para mandar message para o Modelo
-# Usada para classificar os filmes usando o GPT 3.5
-
-def sendMessage(message):
-    api = "https://ora.ai/api/conversation"
-    headers = {
-        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0",
-        "referer": "https://ora.ai/early-red-dymn/chatgpt",
-        "Content-Type": "application/json"
-    }
-    data = {
-        "chatbotId": "c95d0e53-a166-4d0d-b897-0fac177ab7fb",
-        "input": message,
-        "conversationId": "a0df25f2-bd0f-4d4b-9eb7-f51befc7e542",
-        "userId": "auto:9b937fed-eb68-4abd-af1f-8fc250e68e67",
-        "provider": "OPEN_AI",
-        "config": False,
-        "includeHistory": False
-    }
-    json_data = json.dumps(data)
-    r = requests.post(api, headers=headers, data=json_data)
-    jsonData = r.json()
-    return jsonData['response']
+# Chamando Função para enviar Mensagem a API
+ora = Model()
 
 # Função para Pesquisar o site no Site Alvo
 
@@ -116,7 +96,7 @@ moviesOBJFormatted = ''.join(moviesObject)
 
 # Realizando o envio dos filmes para ser classificado e filtrado
 message = f'{moviesOBJFormatted}\n Based on the items above, answer which item correlates more with f"{inputMovie}". Do not include any other explanatory text in your response only number.\nIf none of them match, just reply with the number 0\n Follow this format to response:\n <Number>'
-classificationMovie = sendMessage(message)
+classificationMovie = ora.sendMessage(message)
 
 # Puxando o Filme filtrado
 
@@ -125,7 +105,7 @@ filterMovie = movies["Movies"][int(classificationMovie)]
 # Puxando Informações do Filme 
 # Filtrando Titulo
 titleFilterMessage = f"{filterMovie['title']}\n Based on the items above, Extract the title of the movie, related to '{inputMovie}', Do not include any other explanatory text in your response.\n Follow this format to response:\n <Title of Movie>"
-titleFilter = sendMessage(titleFilterMessage)
+titleFilter = ora.sendMessage(titleFilterMessage)
 
 # Pegando Tamanho Real do Torrent e o Link Magnet
 movieInfo = ScraperMagnetURL(filterMovie['links'])
