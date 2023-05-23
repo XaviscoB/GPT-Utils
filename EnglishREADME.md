@@ -1,21 +1,20 @@
 # GPT-Utils
 Crazy ideas using ChatGPT
+English Version of README
 
-# 💡 Para qual função serve este repositório?
+# 💡 What is the purpose of this repository?
 
-> O repositório foi feita para salvar/guardar invenções malucas ou uteis feitas usando como base ou implentação o ChatGPT.
-Pela API do mesmo sendo fornecida pela OpenAI ser paga, uso e abuso muitas vezes da biblioteca [OpenGPT](https://github.com/uesleibros/OpenGPT) que a disponibiliza varias APIs que disponibilizam o ChatGPT de forma gratuita
+> The repository was created to save/capture crazy or useful inventions made using ChatGPT as a base or implementation. Since the API provided by OpenAI is paid, I often use and abuse the [OpenGPT](https://github.com/uesleibros/OpenGPT) library, which provides several APIs that make ChatGPT available for free
 
-# 📖 Projetos atualmente contidos dentro do Repositório
+# 📖 Projects currently contained within the Repository
 
 - [x] MovieScraper (Working)
-> A função principal dele seria extrair link de torrents, que seria Magnets Links de um site pirata, seu objetivo é simplesmente automatizar a minha tarefa que tenho em um servidor no Discord de adicionar filmes a cada dia
+> Its main function would be to extract torrent links, which would be Magnet Links from a pirate site. Its goal is simply to automate my task of adding movies every day on a Discord server.
 
-# 📚 Projetos a serem adicionados
+# 📚 Projects to be added
 
 - [ ] AutoGPT but without OpenAI API
-> Fiquei intrigado com esta nova tecnologia do Auto-GPT por isto modifiquei alguns arquivos e substitui a API da OpenAI pela minha propria, sendo sincero por uma das oferecidas pelo [OpenGPT](https://github.com/uesleibros/OpenGPT), tenho que polir e formatar para publicar, mas em breve sera lançado
+> I was intrigued by this new Auto-GPT technology, so I modified some files and replaced the OpenAI API with my own, to be honest, one of the ones offered by [OpenGPT](https://github.com/uesleibros/OpenGPT). I have to polish and format it for publishing, but it will be released soon.
 
 - [ ] Integrate ANY Chat Model in LangChain
-> Infelizmente a LangChain tem apenas modelos pagos e limitado para integração e uso do seu FrameWork, por isso modifiquei seus arquivos para permitir que seja adicionado qualquer integraçao, usando como base o modelo do ForeFront sendo disponibilizado pelo [OpenGPT](https://github.com/uesleibros/OpenGPT)
-
+> Unfortunately, LangChain only has paid models and limited integration and usage for its Framework, so I modified its files to allow for any integration to be added.
