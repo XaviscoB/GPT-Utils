@@ -1,5 +1,6 @@
 # GPT-Utils
-Crazy ideas using ChatGPT
+Ideias malucas usando o ChatGPT
+English Version Here: 
 
 # 💡 Para qual função serve este repositório?
 
