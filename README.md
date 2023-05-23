@@ -10,7 +10,7 @@ Pela API do mesmo sendo fornecida pela OpenAI ser paga, uso e abuso muitas vezes
 
 # 📖 Projetos atualmente contidos dentro do Repositório
 
-- [x] MovieScraper (Working)
+- [x] MovieScraper (Broken)
 > A função principal dele seria extrair link de torrents, que seria Magnets Links de um site pirata, seu objetivo é simplesmente automatizar a minha tarefa que tenho em um servidor no Discord de adicionar filmes a cada dia
 
 # 📚 Projetos a serem adicionados
